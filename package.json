@@ -1,0 +1,19 @@
+{
+  "name": "http-query-ai-demo",
+  "version": "1.0.0",
+  "description": "Express demo: HTTP QUERY method for complex AI / vector search (RFC 10008)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=21.7.2"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.21.2",
+    "helmet": "^8.3.0"
+  }
+}

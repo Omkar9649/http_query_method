@@ -1,0 +1,10 @@
+{
+  "text": "refund policy and billing disputes",
+  "filters": {
+    "orgId": "acme",
+    "type": "pdf",
+    "tags": ["refund", "billing"]
+  },
+  "topK": 3,
+  "minScore": 0.4
+}
