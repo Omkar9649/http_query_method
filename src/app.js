@@ -23,13 +23,17 @@ app.use((req, res, next) => {
 
 app.get("/", (_req, res) => {
   res.json({
-    name: "http-query-ai-demo",
+    name: "http-query-method",
     rfc: "https://www.rfc-editor.org/rfc/rfc10008.html",
-    whyQUERY:
-      "Complex AI search needs a JSON body (filters + semantic text + topK). GET has weak body support; POST is for writes. QUERY is the safe read method for this.",
+    story: {
+      GET: "Can fetch, but filters go in the URL — limited for large/complex data",
+      POST: "Can fetch with a JSON body, but POST is unsafe/write-like and not cacheable as a read",
+      QUERY: "Safe read with a JSON body — fixes both GET and POST limitations",
+    },
     endpoints: {
-      "GET /api/ai/documents": "List dummy knowledge-base docs",
-      "QUERY /api/ai/search": "Complex AI / vector search (JSON body)",
+      "GET /api/products": "Fetch (optional simple URL filters; long URL → 414)",
+      "POST /api/products/search": "Fetch with JSON body (bumps postSideEffects; Cache-Control: no-store)",
+      "QUERY /api/products/query": "Fetch with JSON body (safe read; does not bump postSideEffects)",
     },
   });
 });

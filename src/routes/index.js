@@ -1,8 +1,8 @@
 import { Router } from "express";
-import aiRoutes from "./aiRoutes.js";
+import productRoutes from "./productRoutes.js";
 
 const router = Router();
 
-router.use("/ai", aiRoutes);
+router.use("/products", productRoutes);
 
 export default router;

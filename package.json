@@ -1,7 +1,7 @@
 {
-  "name": "http-query-ai-demo",
+  "name": "http-query-demo",
   "version": "1.0.0",
-  "description": "Express demo: HTTP QUERY method for complex AI / vector search (RFC 10008)",
+  "description": "Express demo: HTTP QUERY method for filtered reads with a JSON body",
   "type": "module",
   "main": "src/server.js",
   "scripts": {

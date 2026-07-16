@@ -19,6 +19,15 @@ export default function globalErrorHandler(err, _req, res, _next) {
     });
   }
 
+  if (statusCode === 414) {
+    return res.status(414).json({
+      status: "fail",
+      code: 414,
+      message: err.message,
+      hint: "Use QUERY http://localhost:3001/api/products/query with a JSON body (see examples/query-body.json)",
+    });
+  }
+
   res.status(statusCode).json({
     status,
     code: statusCode,
